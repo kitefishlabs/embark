@@ -45,6 +45,15 @@ const Transactions = ({transactions, contracts, changePage, currentPage, numberO
                   <strong>Type</strong>
                   <div>{transaction.to ? "Contract Call" : "Contract Creation"}</div>
                 </Col>
+                <Col md={6}>
+                  <strong>Mined on:</strong>
+                  <div>
+                    {isToday(new Date(transaction.timestamp * 1000)) ?
+                      distanceInWordsToNow(new Date(transaction.timestamp * 1000), {addSuffix: true}) :
+                      new Date(transaction.timestamp * 1000).toLocaleString()
+                    }
+                  </div>
+                </Col>
               </Row>
             </div>
           ))}

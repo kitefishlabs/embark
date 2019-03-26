@@ -6,7 +6,6 @@ class Profiler {
     this.embark = embark;
     this.logger = embark.logger;
     this.events = embark.events;
-    this.plugins = options.plugins;
     this.gasEstimator = new GasEstimator(embark);
 
     this.registerConsoleCommand();

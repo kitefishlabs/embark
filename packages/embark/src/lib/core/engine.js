@@ -227,7 +227,7 @@ class Engine {
     this.registerModulePackage('embark-vyper');
     this.registerModule('profiler', {plugins: this.plugins});
     this.registerModule('deploytracker', {trackContracts: options.trackContracts});
-    this.registerModule('specialconfigs');
+    this.registerModulePackage('embark-specialconfigs');
     this.registerModule('ens');
     this.registerModule('console_listener', {ipc: self.ipc});
     this.registerModule('deployment', {plugins: this.plugins, onlyCompile: options.onlyCompile});
